@@ -1,8 +1,13 @@
+/* ! This project doesn't have a web responsive desing yet */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* header */
 .logo-box{ 
     padding: 1%;
 }
@@ -23,6 +28,10 @@ nav{
     margin: 0 10px;
     color: black;
 }
+
+
+/* header ends */
+
 
 section{
     display: none;
@@ -51,6 +60,10 @@ section{
     padding: 1%;
     height: 90vh;
   }
+
+
+/* recipes section */
+
 
   .recipes-section{
     margin-top: 5%;
@@ -99,3 +112,25 @@ section{
 .sub-title{
   color: grey;
 }
+
+
+/* recipes section ends */
+
+/* ideas sections */
+.ideas-section{
+    display: none;
+    flex-direction: column;
+}
+
+.container{ 
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.card-ideas{
+    margin-left: 1%;
+    width: 30% ;
+}
+
+/* ideas sections ends */
