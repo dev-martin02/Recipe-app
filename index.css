@@ -41,29 +41,16 @@ section{
  h1 {
     display: flex;
     justify-content: center;
-    /* animation: slidein 5s ease-in-out; */
 }
   
-  @keyframes slidein {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
   main{
     padding: 1%;
     height: 90vh;
   }
 
 
-/* recipes section */
 
+/* recipes section */
 
   .recipes-section{
     margin-top: 5%;
@@ -89,21 +76,24 @@ section{
 
 .plate{
     width: 100%;
+    display: none;
 }
 
 .card{
     display: flex;
     border: 2px solid black;
+    margin: 1% 0;
 }
 
 .plate .card img{
+    max-width: 100%;
     padding: 1px;
     border-right: 2px solid black;
     margin-right: 1%;
 }
-.content{
+/* .content{
     width: 100%;
-}
+} */
 
 .name{
     margin-bottom: 1%
@@ -116,6 +106,8 @@ section{
 
 /* recipes section ends */
 
+
+
 /* ideas sections */
 .ideas-section{
     display: none;
@@ -124,13 +116,52 @@ section{
 
 .container{ 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 2% 0;
+    padding: 1%;
    
 }
 
 .card-ideas{
     margin-left: 1%;
-    width: 30% ;
+    width: 100% ;
+    border: 1px solid #ddd;
 }
-
+.card-ideas img {
+    max-width: 100%; /* Make sure images don't exceed the width of the container */
+    height: auto;
+    display: block;
+    
+  }
 /* ideas sections ends */
+
+@media screen and (max-width: 660PX ) {
+
+    .card{
+        flex-direction: column;
+        border-bottom: 2px solid black; 
+        
+    }
+
+    .plate .card img{
+       border-right: none;
+       margin-right: 0;
+        border-bottom: 2px solid black;
+        margin-bottom: 1%;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust the gap according to your preference */
+      }
+      
+      .card-ideas {
+        width: 100%;
+        border: 1px solid #ddd; /* Add any desired styling for the card */
+        padding: 10px;
+      }
+      
+     
+}
